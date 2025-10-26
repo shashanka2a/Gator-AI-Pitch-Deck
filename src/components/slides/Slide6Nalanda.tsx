@@ -93,10 +93,14 @@ export function Slide6Nalanda() {
             { icon: Link2, label: 'Knowledge Graph', desc: 'Connected reasoning' },
             { icon: Sparkles, label: 'Semantic Search', desc: 'Context-aware retrieval' },
           ].map((feature, index) => (
-            <div key={index} className="glass-card p-6 rounded-xl text-center h-[140px]">
-              <feature.icon className="w-7 h-7 text-purple-400 mx-auto mb-3" />
-              <h3 className="text-white mb-2">{feature.label}</h3>
-              <p className="text-white/50 text-sm">{feature.desc}</p>
+            <div key={index} className="glass-card p-6 rounded-xl h-[140px]">
+              <div className="flex items-start gap-3 mb-3">
+                <feature.icon className="w-7 h-7 text-purple-400 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-white mb-2">{feature.label}</h3>
+                  <p className="text-white/50 text-sm">{feature.desc}</p>
+                </div>
+              </div>
             </div>
           ))}
         </motion.div>
