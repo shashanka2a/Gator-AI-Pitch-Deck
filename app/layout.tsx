@@ -17,6 +17,14 @@ export const metadata: Metadata = {
   description: "Revolutionary AI-powered solutions for the future",
   keywords: ["AI", "Artificial Intelligence", "Technology", "Innovation"],
   authors: [{ name: "Gator AI" }],
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', type: 'image/x-icon' }
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/favicon.svg',
+  },
   openGraph: {
     title: "Gator AI Pitch Deck",
     description: "Revolutionary AI-powered solutions for the future",
