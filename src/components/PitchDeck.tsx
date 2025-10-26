@@ -78,7 +78,15 @@ export function PitchDeck() {
           transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
           className="w-full h-full"
         >
-          <CurrentSlideComponent />
+          <CurrentSlideComponent onNavigateToSlide={(slideIndex: number) => {
+            if (isTransitioning.current) return;
+            setDirection(slideIndex > currentSlide ? 1 : -1);
+            setCurrentSlide(slideIndex);
+            isTransitioning.current = true;
+            setTimeout(() => {
+              isTransitioning.current = false;
+            }, 800);
+          }} />
         </motion.div>
       </AnimatePresence>
 

@@ -1,4 +1,8 @@
 'use client';
+interface SlideProps {
+  onNavigateToSlide?: (slideIndex: number) => void;
+}
+
 
 import { motion } from 'framer-motion';
 import { Activity, TrendingUp, BarChart3, Target } from 'lucide-react';

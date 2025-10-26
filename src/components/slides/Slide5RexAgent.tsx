@@ -1,4 +1,8 @@
 'use client';
+interface SlideProps {
+  onNavigateToSlide?: (slideIndex: number) => void;
+}
+
 
 import { motion } from 'framer-motion';
 import { Terminal, GitBranch, Zap, CheckCircle } from 'lucide-react';

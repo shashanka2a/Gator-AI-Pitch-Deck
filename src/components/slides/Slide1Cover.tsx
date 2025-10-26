@@ -2,7 +2,11 @@
 
 import { motion } from 'framer-motion';
 
-export function Slide1Cover() {
+interface Slide1CoverProps {
+  onNavigateToSlide?: (slideIndex: number) => void;
+}
+
+export function Slide1Cover({ onNavigateToSlide }: Slide1CoverProps) {
   return (
     <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
       {/* Simple Grid Background */}
@@ -50,7 +54,10 @@ export function Slide1Cover() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <button className="gradient-primary px-8 py-3 rounded-full text-white hover:opacity-90 transition-opacity">
+          <button 
+            onClick={() => onNavigateToSlide?.(4)}
+            className="gradient-primary px-8 py-3 rounded-full text-white hover:opacity-90 transition-opacity"
+          >
             Explore Projects
           </button>
         </motion.div>

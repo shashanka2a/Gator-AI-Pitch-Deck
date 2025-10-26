@@ -1,4 +1,8 @@
 'use client';
+interface SlideProps {
+  onNavigateToSlide?: (slideIndex: number) => void;
+}
+
 
 import { motion } from 'framer-motion';
 import { BookOpen, Link2, Sparkles, ArrowRight } from 'lucide-react';
